@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="559.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RegistraUsers">
+   <children>
+      <TableView fx:id="TableView" layoutX="34.0" layoutY="263.0" prefHeight="200.0" prefWidth="669.0">
+        <columns>
+          <TableColumn fx:id="Idcollum" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="UserCollum" prefWidth="127.0" text="NOME" />
+            <TableColumn fx:id="TelefoneCollum" prefWidth="166.0" text="TELEFONE" />
+            <TableColumn fx:id="EmailCollum" prefWidth="300.0" text="E-MAIL" />
+        </columns>
+      </TableView>
+      <Pane fx:id="Painel" layoutX="34.0" layoutY="20.0" prefHeight="229.0" prefWidth="669.0">
+         <children>
+            <Label fx:id="LabelName" layoutX="15.0" layoutY="110.0" text="NAME" />
+            <Label fx:id="LabelTelefone" layoutX="4.0" layoutY="147.0" text="TELEFONE" />
+            <Label fx:id="labelemail" layoutX="11.0" layoutY="188.0" text="E-MAIL" />
+            <TextField fx:id="TxtName" layoutX="68.0" layoutY="106.0" prefHeight="25.0" prefWidth="161.0" />
+            <TextField fx:id="TxtTelefone" layoutX="68.0" layoutY="143.0" prefHeight="25.0" prefWidth="161.0" />
+            <TextField fx:id="Txtemail" layoutX="68.0" layoutY="184.0" prefHeight="25.0" prefWidth="161.0" />
+            <Button fx:id="btnAdd" layoutX="248.0" layoutY="184.0" mnemonicParsing="false" onAction="#BtnAction" prefHeight="25.0" prefWidth="94.0" text="Ok" />
+            <TextField fx:id="Txtid" layoutX="453.0" layoutY="143.0" prefHeight="25.0" prefWidth="66.0" />
+            <Button fx:id="PesquisarId" layoutX="526.0" layoutY="141.0" mnemonicParsing="false" onAction="#findById" prefHeight="25.0" prefWidth="52.0" text="Buscar" />
+            <Label fx:id="LabelChange" layoutX="256.0" layoutY="20.0" prefHeight="27.0" prefWidth="173.0" text="Cadastro de Clientes">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="LabelId" layoutX="385.0" layoutY="147.0" text="Buscar ID" />
+            <Label layoutX="237.0" layoutY="110.0" prefHeight="17.0" prefWidth="117.0" text="Selecione o metodo" />
+            <ComboBox fx:id="OptionsComboBox" layoutX="237.0" layoutY="141.0" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #e0e0e0;" />
+            <TextField fx:id="PesquisaNome" layoutX="452.0" layoutY="184.0" />
+            <Button layoutX="607.0" layoutY="184.0" mnemonicParsing="false" onAction="#findByName" text="Buscar" />
+            <Label layoutX="376.0" layoutY="188.0" text="Buscar nome" />
+         </children>
+      </Pane>
+      <Button fx:id="exitid" layoutX="637.0" layoutY="491.0" mnemonicParsing="false" onAction="#Exit" prefHeight="39.0" prefWidth="66.0" text="Sair">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <TextArea fx:id="textAreaId" layoutX="34.0" layoutY="492.0" prefHeight="37.0" prefWidth="496.0" />
+   </children>
+</AnchorPane>
